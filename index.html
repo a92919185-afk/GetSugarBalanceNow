@@ -35,10 +35,9 @@
 
     <style>
         :root {
-            /* Cores extraídas da foto do produto para total congruência */
-            --midnight: #0F172A; /* Navy Profundo */
-            --indigo-brand: #4338CA; /* Índigo do rótulo */
-            --purple-accent: #6366F1; /* Roxo/Violeta do detalhe */
+            --midnight: #0F172A;
+            --indigo-brand: #4338CA;
+            --purple-accent: #6366F1;
             --bg-soft: #FAFAFB;
             --text-main: #1E293B;
         }
@@ -52,7 +51,6 @@
 
         h1, h2, h3, .font-heading { font-family: 'Lexend', sans-serif; }
 
-        /* Animação Marquee */
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -89,7 +87,6 @@
             transform: translateY(-5px);
         }
 
-        /* Efeito Flutuante Congruente */
         .float-img {
             animation: float 6s ease-in-out infinite;
             filter: drop-shadow(0 30px 40px rgba(15, 23, 42, 0.15));
@@ -99,15 +96,29 @@
             50% { transform: translateY(-20px); }
         }
 
-        /* CTAs Otimizados */
-        .cta-btn {
+        /* Botão DTC Principal */
+        .cta-btn-main {
             background: linear-gradient(135deg, var(--midnight) 0%, var(--indigo-brand) 100%);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.3);
         }
-        .cta-btn:hover {
+        .cta-btn-main:hover {
             transform: translateY(-3px);
             box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.4);
+        }
+
+        /* Botão VSL (Vídeo) */
+        .cta-btn-video {
+            background: white;
+            border: 2px solid var(--indigo-brand);
+            color: var(--midnight);
+            transition: all 0.3s ease;
+        }
+        .cta-btn-video:hover {
+            background: #F5F7FF;
+            border-color: var(--purple-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(67, 56, 202, 0.1);
         }
 
         /* FAQ */
@@ -133,7 +144,6 @@
         .faq-item.active .faq-answer {
             max-height: 500px;
             padding-bottom: 1.5rem;
-            transition: max-height 0.4s ease-in-out;
         }
         .faq-item.active .faq-icon { transform: rotate(180deg); color: var(--indigo-brand); }
         .faq-icon { transition: transform 0.3s ease; }
@@ -163,9 +173,8 @@
     </header>
 
     <main>
-        <!-- Hero Section com Cores Congruentes -->
+        <!-- Hero Section -->
         <section class="relative pt-10 lg:pt-20 pb-20 overflow-hidden bg-white">
-            <!-- Decorative Elements matching the purple label glow -->
             <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-50/50 blur-[120px] rounded-full -z-10"></div>
             
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 lg:gap-16 items-center">
@@ -176,55 +185,52 @@
                         <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Premium Natural Support 2026</span>
                     </div>
 
-                    <!-- Headline -->
                     <h1 class="text-5xl lg:text-8xl font-extrabold text-slate-900 leading-[1.02] tracking-tighter mb-8">
                         Master Your <br/> 
                         <span class="text-[#4338CA]">Metabolic</span> <span class="text-slate-400">Flow.</span>
                     </h1>
 
-                    <!-- Product Photo After Title (Otimizada para Mobile) -->
-                    <div class="w-full flex justify-center lg:hidden mb-12">
-                        <img src="images/glycopezil.png" alt="GlycoPezil Bottle" class="float-img w-full max-w-[280px]">
+                    <!-- Product Photo After Title (Otimizada e Aumentada para Mobile) -->
+                    <div class="w-full flex justify-center lg:hidden mb-14">
+                        <img src="images/glycopezil.png" alt="GlycoPezil Bottle" class="float-img w-full max-w-[350px] sm:max-w-[380px] px-4">
                     </div>
 
                     <p class="text-lg lg:text-xl text-slate-500 mb-10 leading-relaxed max-w-xl font-medium">
                         GlycoPezil™ offers a refined, natural approach to supporting your body's equilibrium. Crafted with science-backed ingredients for total vitality.
                     </p>
 
-                    <!-- CTAs Centralizados e Otimizados para Mobile -->
+                    <!-- CTAs -->
                     <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-                        <!-- MOBILE: Texto mais curto para evitar 2 linhas -->
-                        <a href="https://mwebora.com/12000/1227/7/?" class="cta-btn text-white px-10 py-5 rounded-2xl font-extrabold text-center flex flex-col items-center justify-center group">
+                        <a href="https://mwebora.com/12000/1227/7/?" class="cta-btn-main text-white px-10 py-5 rounded-2xl font-extrabold text-center flex flex-col items-center justify-center group">
                             <span class="flex items-center gap-2 text-xl lg:hidden">Order Now & Save <i data-feather="shopping-bag" class="w-5 h-5"></i></span>
                             <span class="hidden lg:flex items-center gap-2 text-xl">Order Now & Save Up to 50% <i data-feather="shopping-bag" class="w-5 h-5"></i></span>
                             <span class="text-[10px] opacity-80 font-bold uppercase tracking-widest mt-1">Secure Checkout</span>
                         </a>
                         
-                        <a href="https://mwebora.com/12000/1227/3/?" class="bg-white text-slate-900 border-2 border-slate-200 px-10 py-5 rounded-2xl font-extrabold text-center flex flex-col items-center justify-center hover:border-indigo-500 transition-all">
-                            <span class="flex items-center gap-2 text-xl lg:hidden">Watch Video <i data-feather="play-circle" class="w-5 h-5"></i></span>
-                            <span class="hidden lg:flex items-center gap-2 text-xl">Watch Video Presentation <i data-feather="play-circle" class="w-5 h-5"></i></span>
-                            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">Presentation</span>
+                        <a href="https://mwebora.com/12000/1227/3/?" class="cta-btn-video px-10 py-5 rounded-2xl font-extrabold text-center flex flex-col items-center justify-center group">
+                            <span class="flex items-center gap-2 text-xl lg:hidden">Watch Video <i data-feather="play-circle" class="w-5 h-5 text-[#4338CA]"></i></span>
+                            <span class="hidden lg:flex items-center gap-2 text-xl">Watch Video Presentation <i data-feather="play-circle" class="w-5 h-5 text-[#4338CA]"></i></span>
+                            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">Free Educational Video</span>
                         </a>
                     </div>
 
-                    <!-- Trust Checklist -->
                     <div class="mt-14 flex flex-wrap items-center gap-x-10 gap-y-5 opacity-50 justify-center lg:justify-start w-full">
                         <div class="flex items-center gap-2">
-                            <i data-feather="shield" class="w-4 h-4"></i>
+                            <i data-feather="shield" class="w-4 h-4 text-indigo-600"></i>
                             <span class="text-[10px] font-black uppercase tracking-widest">GMP Certified</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i data-feather="map-pin" class="w-4 h-4"></i>
+                            <i data-feather="map-pin" class="w-4 h-4 text-indigo-600"></i>
                             <span class="text-[10px] font-black uppercase tracking-widest">Made in USA</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i data-feather="refresh-ccw" class="w-4 h-4"></i>
+                            <i data-feather="refresh-cw" class="w-4 h-4 text-indigo-600"></i>
                             <span class="text-[10px] font-black uppercase tracking-widest">60-Day Promise</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- DESKTOP PHOTO (Aumentada para Congruência) -->
+                <!-- Desktop Photo -->
                 <div class="hidden lg:flex lg:col-span-5 justify-center relative">
                     <img src="images/glycopezil.png" alt="GlycoPezil Premium Formula" class="float-img w-full max-w-[550px]">
                 </div>
@@ -245,7 +251,6 @@
             
             <div class="marquee-container">
                 <div class="marquee-content">
-                    <!-- Review Card 1 -->
                     <div class="review-card">
                         <div class="flex justify-between items-start mb-6">
                             <div class="stars-accent font-bold">★★★</div>
@@ -254,7 +259,6 @@
                         <p class="text-[16px] font-medium text-slate-700 leading-relaxed mb-8 italic">"The best support formula I've ever used. Energy is stable and shipping was incredibly fast."</p>
                         <div class="text-[13px] font-extrabold text-slate-900 tracking-tight">— Robert L., Florida</div>
                     </div>
-                    <!-- Review Card 2 -->
                     <div class="review-card">
                         <div class="flex justify-between items-start mb-6">
                             <div class="stars-accent font-bold">★★★</div>
@@ -263,7 +267,6 @@
                         <p class="text-[16px] font-medium text-slate-700 leading-relaxed mb-8 italic">"Exactly what I was looking for to support my daily wellness naturally. Premium quality indeed!"</p>
                         <div class="text-[13px] font-extrabold text-slate-900 tracking-tight">— Sarah P., California</div>
                     </div>
-                    <!-- Review Card 3 -->
                     <div class="review-card">
                         <div class="flex justify-between items-start mb-6">
                             <div class="stars-accent font-bold">★★★</div>
@@ -276,7 +279,7 @@
             </div>
         </section>
 
-        <!-- FAQ SECTION (Accordion) -->
+        <!-- FAQ SECTION -->
         <section class="py-24 bg-white">
             <div class="max-w-3xl mx-auto px-6">
                 <div class="text-center mb-16">
@@ -367,13 +370,13 @@
         <div class="fixed inset-0 bg-slate-950/95 backdrop-blur-xl" onclick="closeModal()"></div>
         <div class="fixed inset-0 flex items-center justify-center p-4">
             <div class="bg-white w-full max-w-2xl rounded-[3rem] overflow-hidden shadow-2xl relative">
-                <div class="px-10 py-8 border-b border-slate-100 flex justify-between items-center">
+                <div class="px-10 py-8 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
                     <h3 class="font-bold text-slate-900 text-lg" id="modal-title">Policy</h3>
-                    <button onclick="closeModal()" class="p-3 hover:bg-slate-50 rounded-full transition-all">
+                    <button onclick="closeModal()" class="p-3 hover:bg-white rounded-full transition-all shadow-sm">
                         <i data-feather="x" class="w-6 h-6 text-slate-400"></i>
                     </button>
                 </div>
-                <div class="p-10 max-h-[65vh] overflow-y-auto text-[15px] text-slate-600 leading-relaxed" id="modal-content"></div>
+                <div class="p-10 max-h-[65vh] overflow-y-auto text-[15px] text-slate-600 leading-relaxed prose prose-slate" id="modal-content"></div>
             </div>
         </div>
     </div>
