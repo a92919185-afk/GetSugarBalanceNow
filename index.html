@@ -38,8 +38,8 @@
             --midnight: #0F172A;
             --indigo-brand: #4338CA;
             --purple-accent: #6366F1;
-            /* Nova Cor de Fundo Solicitada */
-            --bg-body: #EAE9EE; 
+            /* Cor de fundo exata para combinar com a foto */
+            --bg-body: #EBE9EF; 
         }
 
         body { 
@@ -52,7 +52,7 @@
 
         h1, h2, h3, .font-heading { font-family: 'Lexend', sans-serif; }
 
-        /* Formas Geométricas para dar cor ao fundo */
+        /* Fundo com Formas Geométricas Sutis */
         .geo-bg {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -63,12 +63,12 @@
 
         .shape {
             position: absolute;
-            border: 1px solid rgba(67, 56, 202, 0.1);
+            border: 1px solid rgba(67, 56, 202, 0.08);
+            border-radius: 20px;
         }
 
-        .shape-1 { width: 500px; height: 500px; top: -5%; right: -10%; border-radius: 60px; transform: rotate(20deg); background: rgba(99, 102, 241, 0.03); }
-        .shape-2 { width: 350px; height: 350px; bottom: 10%; left: -5%; border-radius: 50%; border-width: 2px; border-color: rgba(67, 56, 202, 0.05); }
-        .shape-3 { width: 250px; height: 500px; top: 30%; left: 5%; border-radius: 120px; transform: rotate(-15deg); background: linear-gradient(to bottom, rgba(67, 56, 202, 0.04), transparent); }
+        .shape-1 { width: 450px; height: 450px; top: -5%; right: -10%; transform: rotate(15deg); background: rgba(99, 102, 241, 0.02); }
+        .shape-2 { width: 300px; height: 300px; bottom: 5%; left: -5%; border-radius: 50%; border-width: 2px; border-color: rgba(67, 56, 202, 0.05); }
 
         /* Marquee Constante Loop Infinito */
         @keyframes scroll {
@@ -81,10 +81,10 @@
             white-space: nowrap;
             position: relative;
             padding: 4rem 0;
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(8px);
-            border-top: 1px solid rgba(15, 23, 42, 0.05);
-            border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border-top: 1px solid rgba(15, 23, 42, 0.03);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.03);
         }
 
         .marquee-content {
@@ -101,8 +101,8 @@
             width: 420px;
             min-width: 420px;
             white-space: normal;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.02);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             flex-direction: column;
@@ -111,33 +111,35 @@
 
         .review-card:hover {
             border-color: var(--indigo-brand);
-            box-shadow: 0 25px 50px -12px rgba(67, 56, 202, 0.1);
             transform: translateY(-10px);
         }
 
-        /* Imagem do Produto */
-        .float-img {
+        /* Foto do Produto - Removido bordas e sombras para misturar com o fundo */
+        .blend-img {
+            max-width: 100%;
+            height: auto;
+            border: none;
+            outline: none;
             animation: float 6s ease-in-out infinite;
-            filter: drop-shadow(0 30px 50px rgba(15, 23, 42, 0.25));
         }
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-15px); }
         }
 
-        /* Botões Estilizados */
+        /* Botões Unificados */
         .cta-btn-main {
             background: linear-gradient(135deg, var(--midnight) 0%, var(--indigo-brand) 100%);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 15px 40px -10px rgba(67, 56, 202, 0.4);
+            box-shadow: 0 15px 40px -10px rgba(67, 56, 202, 0.35);
         }
         .cta-btn-main:hover {
             transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 30px 60px -15px rgba(67, 56, 202, 0.5);
+            box-shadow: 0 30px 60px -15px rgba(67, 56, 202, 0.45);
         }
 
         .cta-btn-video {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.8);
             border: 2px solid var(--indigo-brand);
             color: var(--midnight);
             transition: all 0.3s ease;
@@ -145,13 +147,13 @@
         .cta-btn-video:hover {
             background: #FFFFFF;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(67, 56, 202, 0.1);
+            box-shadow: 0 10px 25px rgba(67, 56, 202, 0.08);
         }
 
-        /* FAQ Accordion */
+        /* FAQ */
         .faq-item {
             background: white;
-            border: 1px solid rgba(15, 23, 42, 0.05);
+            border: 1px solid rgba(15, 23, 42, 0.02);
             border-radius: 2rem;
             margin-bottom: 1rem;
             transition: all 0.3s ease;
@@ -198,11 +200,10 @@
 </head>
 <body>
 
-    <!-- Fundo Geométrico Colorido -->
+    <!-- Fundo Geométrico -->
     <div class="geo-bg">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
     </div>
 
     <!-- Header com Cor e Texto Sem Negrito -->
@@ -219,7 +220,7 @@
                 
                 <!-- CONTENT AREA -->
                 <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <div class="inline-flex items-center gap-3 bg-white border border-indigo-100 px-6 py-3 rounded-full mb-10 shadow-sm">
+                    <div class="inline-flex items-center gap-3 bg-white border border-indigo-100 px-6 py-3 rounded-full mb-10">
                         <span class="h-2.5 w-2.5 rounded-full bg-indigo-600 animate-pulse"></span>
                         <span class="text-[13px] font-extrabold text-indigo-900/60 uppercase tracking-widest">Bio-Cellular Wellness 2026</span>
                     </div>
@@ -229,13 +230,13 @@
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-purple-600">Metabolic</span> <span class="text-indigo-600">Flow.</span>
                     </h1>
 
-                    <!-- Product Photo (Nova Imagem: images/glycop.png) -->
-                    <div class="w-full flex justify-center lg:hidden mb-16 relative">
-                        <img src="images/glycop.png" alt="GlycoPezil Formula" class="float-img w-full max-w-[340px] sm:max-w-[380px] px-2 relative z-10">
+                    <!-- Product Photo (Blended Background) -->
+                    <div class="w-full flex justify-center lg:hidden mb-16">
+                        <img src="images/glycop.png" alt="GlycoPezil Formula" class="blend-img w-full max-w-[340px] sm:max-w-[380px] px-2">
                     </div>
 
                     <p class="text-xl lg:text-3xl text-slate-600 mb-14 leading-relaxed max-w-xl font-medium tracking-tight">
-                        GlycoPezil™ offers a refined, natural approach to supporting your body's daily balance. Crafted for those who demand excellence.
+                        GlycoPezil™ offers a refined, natural approach to supporting your body's daily balance. Crafted for those who demand excellence in wellness.
                     </p>
 
                     <!-- CTAs Unificados -->
@@ -268,9 +269,9 @@
                     </div>
                 </div>
 
-                <!-- Desktop Photo -->
-                <div class="hidden lg:flex lg:col-span-5 justify-center relative">
-                    <img src="images/glycop.png" alt="GlycoPezil Official" class="float-img w-full lg:max-w-[620px] xl:max-w-[700px] relative z-10">
+                <!-- Desktop Photo (Impactante e Misturada com o Fundo) -->
+                <div class="hidden lg:flex lg:col-span-5 justify-center">
+                    <img src="images/glycop.png" alt="GlycoPezil Official" class="blend-img w-full lg:max-w-[620px] xl:max-w-[700px]">
                 </div>
 
             </div>
@@ -291,6 +292,7 @@
             
             <div class="marquee-container">
                 <div class="marquee-content">
+                    <!-- Bloco Original -->
                     <div class="review-card">
                         <div class="flex justify-between items-start mb-8">
                             <div class="stars-gold font-bold">★★★★★</div>
@@ -321,7 +323,7 @@
                             <div class="stars-gold font-bold">★★★★★</div>
                             <div class="verified-badge"><i data-feather="tag" class="w-3.5 h-3.5"></i> Verified Purchase</div>
                         </div>
-                        <p class="text-[18px] font-medium text-slate-700 leading-relaxed mb-10 italic">"The best support formula I've ever used. Energy is stable and shipping was incredibly fast. Highly recommended!"</p>
+                        <p class="text-[18px] font-medium text-slate-700 leading-relaxed mb-10 italic">"The best support formula I've ever used. Energy is stable and shipping was incredibly fast."</p>
                         <div class="text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— Robert L., Florida</div>
                     </div>
                     <div class="review-card">
@@ -329,7 +331,7 @@
                             <div class="stars-gold font-bold">★★★★★</div>
                             <div class="verified-badge"><i data-feather="tag" class="w-3.5 h-3.5"></i> Verified Purchase</div>
                         </div>
-                        <p class="text-[18px] font-medium text-slate-700 leading-relaxed mb-10 italic">"Exactly what I was looking for to support my daily wellness naturally. Premium quality indeed and results are showing."</p>
+                        <p class="text-[18px] font-medium text-slate-700 leading-relaxed mb-10 italic">"Premium quality indeed and results are showing. I've already shared it with my friends!"</p>
                         <div class="text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— Sarah P., California</div>
                     </div>
                 </div>
@@ -348,7 +350,7 @@
                     <div class="faq-item" onclick="toggleFaq(this)">
                         <div class="faq-question">
                             <span>How should I take GlycoPezil™?</span>
-                            <i data-feather="plus" class="faq-icon w-6 h-6"></i>
+                            <i data-feather="plus" class="faq-icon w-6 h-6 text-slate-400"></i>
                         </div>
                         <div class="faq-answer">
                             <p>For best results, take one serving daily with a full glass of water, ideally 20-30 minutes before your first meal of the day.</p>
@@ -358,7 +360,7 @@
                     <div class="faq-item" onclick="toggleFaq(this)">
                         <div class="faq-question">
                             <span>Is there a money-back guarantee?</span>
-                            <i data-feather="plus" class="faq-icon w-6 h-6"></i>
+                            <i data-feather="plus" class="faq-icon w-6 h-6 text-slate-400"></i>
                         </div>
                         <div class="faq-answer">
                             <p>Absolutely. We stand behind our product with a 60-Day, 100% Money-Back Guarantee. If you're not thrilled with your results, we'll refund you no questions asked.</p>
@@ -368,7 +370,7 @@
                     <div class="faq-item" onclick="toggleFaq(this)">
                         <div class="faq-question">
                             <span>How long does shipping take?</span>
-                            <i data-feather="plus" class="faq-icon w-6 h-6"></i>
+                            <i data-feather="plus" class="faq-icon w-6 h-6 text-slate-400"></i>
                         </div>
                         <div class="faq-answer">
                             <p>US orders are processed within 24 hours. Delivery usually takes 3-5 business days via USPS or UPS.</p>
@@ -399,7 +401,7 @@
                 <div class="lg:col-span-7">
                     <div class="bg-white/5 rounded-[3.5rem] p-12 border border-white/10">
                         <p class="text-[13px] leading-relaxed italic text-justify text-slate-500">
-                            <strong>FDA Disclaimer:</strong> These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. © 2026 Authorized Distributor.
+                            <strong>FDA Disclaimer:</strong> These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results vary by individual. © 2026 Authorized Distributor.
                         </p>
                     </div>
                 </div>
