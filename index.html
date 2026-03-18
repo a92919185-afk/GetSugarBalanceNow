@@ -51,6 +51,7 @@
 
         h1, h2, h3, .font-heading { font-family: 'Lexend', sans-serif; }
 
+        /* Subtle Geometric Background Elements */
         .geo-bg {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -68,6 +69,7 @@
         .shape-1 { width: 450px; height: 450px; top: -5%; right: -10%; transform: rotate(15deg); background: rgba(99, 102, 241, 0.02); }
         .shape-2 { width: 300px; height: 300px; bottom: 5%; left: -5%; border-radius: 50%; border-width: 2px; border-color: rgba(67, 56, 202, 0.05); }
 
+        /* Seamless Infinite Marquee */
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -111,6 +113,7 @@
             transform: translateY(-10px);
         }
 
+        /* Product Image Fusion */
         .blend-img {
             max-width: 100%;
             height: auto;
@@ -123,6 +126,7 @@
             50% { transform: translateY(-15px); }
         }
 
+        /* CTAs */
         .cta-btn-main {
             background: linear-gradient(135deg, var(--midnight) 0%, var(--indigo-brand) 100%);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -145,6 +149,7 @@
             box-shadow: 0 10px 25px rgba(67, 56, 202, 0.08);
         }
 
+        /* FAQ */
         .faq-item {
             background: white;
             border: 1px solid rgba(15, 23, 42, 0.02);
@@ -211,6 +216,7 @@
         <section class="relative pt-16 lg:pt-28 pb-20">
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 lg:gap-20 items-center">
                 
+                <!-- CONTENT AREA -->
                 <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
                     <div class="inline-flex items-center gap-3 bg-white border border-indigo-100 px-6 py-3 rounded-full mb-10">
                         <span class="h-2.5 w-2.5 rounded-full bg-indigo-600 animate-pulse"></span>
@@ -222,7 +228,7 @@
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-purple-600">Metabolic</span> <span class="text-indigo-600">Flow.</span>
                     </h1>
 
-                    <!-- Product Photo (Blended) -->
+                    <!-- Product Photo (Mobile) -->
                     <div class="w-full flex justify-center lg:hidden mb-16 relative">
                         <img src="images/glycop.png" alt="GlycoPezil Formula" class="blend-img w-full max-w-[340px] sm:max-w-[380px] px-2 relative z-10">
                     </div>
@@ -231,18 +237,20 @@
                         GlycoPezil™ offers a refined, natural approach to supporting your body's daily balance. Crafted for those who demand excellence in wellness.
                     </p>
 
+                    <!-- CTAs - Unificados -->
                     <div class="flex flex-col sm:flex-row gap-6 w-full lg:w-auto">
                         <a href="https://mwebora.com/12000/1227/7/?" class="cta-btn-main text-white px-12 py-7 rounded-[2.5rem] font-extrabold text-center flex flex-col items-center justify-center group">
                             <span class="flex items-center gap-2 text-2xl">Order Now & Save <i data-feather="shopping-bag" class="w-6 h-6"></i></span>
                             <span class="text-[11px] opacity-70 font-bold uppercase tracking-widest mt-1">Official Secure Checkout</span>
                         </a>
                         
-                        <a href="https://mwebora.com/12000/1227/3/?" class="cta-btn-video px-12 py-7 rounded-[2.5rem] font-extrabold text-center flex flex-col items-center justify-center group">
+                        <a href="https://mwebora.com/12000/1227/3/?" class="cta-btn-video px-12 py-7 rounded-[2.5rem] font-extrabold text-center flex flex-col items-center justify-center group shadow-sm">
                             <span class="flex items-center gap-2 text-2xl">Watch Video <i data-feather="play-circle" class="w-6 h-6 text-[#4338CA]"></i></span>
                             <span class="text-[11px] text-slate-400 font-bold uppercase tracking-widest mt-1">Free Presentation</span>
                         </a>
                     </div>
 
+                    <!-- Trust Bar -->
                     <div class="mt-20 flex flex-wrap items-center gap-x-12 gap-y-6 opacity-40 justify-center lg:justify-start w-full">
                         <div class="flex items-center gap-2">
                             <i data-feather="shield" class="w-5 h-5"></i>
@@ -320,7 +328,7 @@
                             <div class="verified-badge"><i data-feather="tag" class="w-3.5 h-3.5"></i> Verified Purchase</div>
                         </div>
                         <p class="text-[18px] font-medium text-slate-700 leading-relaxed mb-10 italic">"Premium quality indeed and results are showing. I've already shared it with my friends!"</p>
-                        <div class="text-[14px] font-extrabold text-slate-900 tracking-tight uppercase">— Sarah P., California</div>
+                        <div class="text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— Sarah P., California</div>
                     </div>
                 </div>
             </div>
