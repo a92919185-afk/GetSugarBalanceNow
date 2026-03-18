@@ -12,8 +12,22 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://getsugarbalancenow.vercel.app/">
 
+    <!-- FAVICON (Imagem mantida apenas aqui) -->
+    <link rel="icon" type="image/png" href="images/faviconV2.png">
+    <link rel="shortcut icon" type="image/png" href="images/faviconV2.png">
+
     <!-- EXTERNAL TRACKING SCRIPT -->
     <script src="https://cdn.kavrocdn.com/code/8300-8378ed0f-3128-4d7f-99ed-bd29e629b6e3"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014740845"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18014740845');
+    </script>
 
     <!-- UI Frameworks -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -102,27 +116,14 @@
 
         .accent-text { color: var(--accent); }
         .accent-border { border-color: var(--accent); }
-        
-        /* Máscara branca para a logo */
-        .logo-mask {
-            background: white;
-            padding: 4px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
     </style>
 </head>
 <body>
 
-    <!-- Header Centralizado com Cor #384C6C -->
+    <!-- Header Centralizado com Texto GLYCOPEZIL -->
     <header class="bg-[#384C6C] sticky top-0 z-50 border-b border-white/10 shadow-md">
-        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-center items-center">
-            <div class="logo-mask">
-                <img src="images/faviconV2.png" alt="GlycoPezil Logo" class="w-11 h-11 object-contain">
-            </div>
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center">
+            <span class="font-heading font-extrabold text-2xl text-white tracking-tighter uppercase">GLYCOPEZIL</span>
         </div>
     </header>
 
@@ -145,9 +146,9 @@
                         <span class="accent-text">Metabolic</span> Flow.
                     </h1>
 
-                    <!-- Product Photo After Title (Mobile & Desktop Flow) -->
-                    <div class="w-full flex justify-center lg:hidden mb-10">
-                        <img src="images/glycopezil1.webp" alt="GlycoPezil Bottle" class="float-img w-full max-w-[320px] drop-shadow-2xl">
+                    <!-- Product Photo After Title -->
+                    <div class="w-full flex justify-center mb-10">
+                        <img src="images/glycopezil1.webp" alt="GlycoPezil Bottle" class="float-img w-full max-w-[320px] lg:max-w-[420px] drop-shadow-2xl">
                     </div>
 
                     <p class="text-lg text-slate-500 mb-10 leading-relaxed max-w-lg">
@@ -184,10 +185,8 @@
                     </div>
                 </div>
 
-                <!-- Desktop Photo Position -->
                 <div class="hidden lg:flex lg:order-2 justify-center relative">
                     <div class="absolute inset-0 bg-[#384C6C]/10 blur-3xl rounded-full -z-10 transform scale-75"></div>
-                    <img src="images/glycopezil1.webp" alt="GlycoPezil Wellness Supplement" class="float-img w-full max-w-[480px] drop-shadow-[0_35px_35px_rgba(0,0,0,0.15)]">
                 </div>
             </div>
         </section>
@@ -242,7 +241,7 @@
                             <span class="text-[10px] accent-text font-bold bg-slate-100 px-2 py-1 rounded">Verified Order</span>
                         </div>
                     </div>
-                    <!-- Repeat for Loop -->
+                    <!-- Duplicate for Marquee -->
                     <div class="review-card">
                         <p class="text-sm font-medium text-slate-700 italic mb-4">"I’ve tried several supplements, but GlycoPezil is the first one that truly fits my daily routine. My energy levels feel incredibly consistent now."</p>
                         <div class="flex items-center justify-between">
@@ -289,10 +288,8 @@
             <div class="grid lg:grid-cols-12 gap-12 mb-16">
                 <div class="lg:col-span-4">
                     <div class="flex items-center mb-6">
-                        <!-- Photo Logo Only - Footer -->
-                        <div class="logo-mask bg-white/10 p-1">
-                            <img src="images/faviconV2.png" alt="GlycoPezil Logo" class="w-10 h-10 object-contain">
-                        </div>
+                        <!-- Texto Logotipo no Rodapé -->
+                        <span class="font-heading font-extrabold text-xl text-white tracking-tighter uppercase">GLYCOPEZIL</span>
                     </div>
                     <p class="text-sm leading-relaxed mb-6">
                         Premium metabolic wellness support for a more balanced lifestyle. Dedicated to quality, transparency, and your well-being.
