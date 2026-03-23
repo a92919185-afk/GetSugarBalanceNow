@@ -137,18 +137,6 @@
             box-shadow: 0 30px 60px -15px rgba(67, 56, 202, 0.45);
         }
 
-        .cta-btn-video {
-            background: rgba(255, 255, 255, 0.8);
-            border: 2px solid var(--indigo-brand);
-            color: var(--midnight);
-            transition: all 0.3s ease;
-        }
-        .cta-btn-video:hover {
-            background: #FFFFFF;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(67, 56, 202, 0.08);
-        }
-
         /* FAQ */
         .faq-item {
             background: white;
@@ -240,16 +228,11 @@
                         GlycoPezil™ offers a refined, natural approach to supporting your body's daily balance. Crafted for those who demand excellence in wellness.
                     </p>
 
-                    <!-- CTAs - Updated Links -->
+                    <!-- CTAs - Removed Watch Video & Updated Main Button -->
                     <div class="flex flex-col sm:flex-row gap-5 w-full lg:w-auto">
-                        <a href="https://mwebora.com/12000/1227/7/?" class="cta-btn-main text-white px-10 py-6 lg:px-12 lg:py-7 rounded-[2.5rem] font-extrabold text-center flex flex-col items-center justify-center group">
+                        <a href="https://mwebora.com/12000/1227/7/?" class="cta-btn-main text-white px-10 py-6 lg:px-12 lg:py-7 rounded-[2.5rem] font-extrabold text-center flex flex-col items-center justify-center group w-full lg:w-auto">
                             <span class="flex items-center gap-2 text-xl lg:text-2xl">Order Now & Save <i data-feather="shopping-bag" class="w-6 h-6"></i></span>
                             <span class="text-[10px] opacity-70 font-bold uppercase tracking-widest mt-1">Official Secure Checkout</span>
-                        </a>
-                        
-                        <a href="https://mwebora.com/12000/1227/3/?" class="cta-btn-video px-10 py-6 lg:px-12 lg:py-7 rounded-[2.5rem] font-extrabold text-center flex flex-col items-center justify-center group shadow-sm">
-                            <span class="flex items-center gap-2 text-xl lg:text-2xl">Watch Video <i data-feather="play-circle" class="w-6 h-6 text-[#4338CA]"></i></span>
-                            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">Free Presentation</span>
                         </a>
                     </div>
 
@@ -278,7 +261,7 @@
             </div>
         </section>
 
-        <!-- Marquee de Reviews (Unificado) -->
+        <!-- Marquee de Reviews -->
         <section class="pb-24">
             <div class="max-w-7xl mx-auto px-6 text-center mb-8">
                 <div class="flex justify-center gap-1 stars-gold">
@@ -316,7 +299,7 @@
                         <p class="text-base lg:text-[18px] font-medium text-slate-700 leading-relaxed mb-10 italic">"I'm on my 3rd bottle and the results are consistent. Great customer support too. Total transparency."</p>
                         <div class="text-[14px] lg:text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— James H., Texas</div>
                     </div>
-                    <!-- Duplicate for infinite loop -->
+                    <!-- Duplicate for loop -->
                     <div class="review-card">
                         <div class="flex justify-between items-start mb-8">
                             <div class="stars-gold font-bold">★★★★★</div>
@@ -342,7 +325,7 @@
             <div class="max-w-4xl mx-auto px-6">
                 <div class="text-center mb-16 lg:mb-20">
                     <h2 class="text-4xl lg:text-6xl font-extrabold text-slate-900 mb-6 tracking-tighter">FAQ</h2>
-                    <p class="text-lg lg:text-xl text-slate-500 font-medium px-4">Empowering your choices with clarity and science.</p>
+                    <p class="text-lg lg:text-xl text-slate-500 font-medium px-4">Your most common questions answered.</p>
                 </div>
 
                 <div class="space-y-4 px-2 lg:px-0">
@@ -358,21 +341,43 @@
 
                     <div class="faq-item" onclick="toggleFaq(this)">
                         <div class="faq-question">
-                            <span>Is there a money-back guarantee?</span>
+                            <span>Is there a 60-day money-back guarantee?</span>
                             <i data-feather="plus" class="faq-icon w-5 h-5 lg:w-6 lg:h-6 text-slate-400"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Absolutely. We stand behind our product with a 60-Day, 100% Money-Back Guarantee. If you're not thrilled with your results, we'll refund you no questions asked.</p>
+                            <p>Yes. We stand behind our product with a 60-Day, 100% Money-Back Guarantee. If you're not thrilled with your results, we'll refund your purchase—no questions asked.</p>
                         </div>
                     </div>
 
                     <div class="faq-item" onclick="toggleFaq(this)">
                         <div class="faq-question">
                             <span>How long does shipping take?</span>
+                            <i data-feather="plus" class="faq-icon w-6 h-6 text-slate-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>US orders are processed within 24 hours. Delivery usually takes 3-5 business days via USPS or UPS depending on your specific location.</p>
+                        </div>
+                    </div>
+
+                    <!-- Added FAQ 4 -->
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>Is my personal information secure?</span>
                             <i data-feather="plus" class="faq-icon w-5 h-5 lg:w-6 lg:h-6 text-slate-400"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>US orders are processed within 24 hours. Delivery usually takes 3-5 business days via USPS or UPS.</p>
+                            <p>Absolutely. We use industry-standard 256-bit SSL encryption to ensure your data is always protected and your transaction is 100% secure.</p>
+                        </div>
+                    </div>
+
+                    <!-- Added FAQ 5 -->
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>Is this a one-time payment?</span>
+                            <i data-feather="plus" class="faq-icon w-6 h-6 text-slate-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, your purchase today is a one-time payment with no hidden charges or recurring subscriptions. You only pay for what you order today.</p>
                         </div>
                     </div>
                 </div>
@@ -453,7 +458,7 @@
         const modalData = {
             privacy: { title: "Privacy Policy", content: "<p>Your privacy is important to us. All personal data is encrypted and used only for fulfilling your orders.</p>" },
             terms: { title: "Terms & Conditions", content: "<p>Standard usage and legal guidelines for purchasing and using our dietary supplements.</p>" },
-            returns: { title: "60-Day Guarantee", content: "<p>If you're not satisfied, contact us within 60 days for a full refund.</p>" },
+            returns: { title: "60-Day Guarantee", content: "<p>We offer a hassle-free, 60-Day Money-Back Guarantee. If you're not satisfied, we'll refund you.</p>" },
             shipping: { title: "Shipping Information", content: "<p>Orders are shipped from our US facility within 24 hours. Expected delivery is 3-5 business days.</p>" },
             contact: { title: "Get In Touch", content: "<p>Our customer service team is available 24/7 at support@customercs.com to help with any inquiries.</p>" }
         };
