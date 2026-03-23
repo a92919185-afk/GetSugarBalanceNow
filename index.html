@@ -111,7 +111,7 @@
             overflow: hidden;
             white-space: nowrap;
             position: relative;
-            padding: 3rem 0;
+            padding: 2.5rem 0;
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(5px);
             border-top: 1px solid rgba(15, 23, 42, 0.03);
@@ -120,20 +120,20 @@
 
         .marquee-content {
             display: inline-flex;
-            gap: 2.5rem;
+            gap: 1.5rem;
             animation: scroll 60s linear infinite;
             width: max-content;
         }
 
         .review-card {
             background: #FFFFFF;
-            padding: 2rem;
-            border-radius: 2rem;
-            width: 340px;
-            min-width: 340px;
+            padding: 1.75rem;
+            border-radius: 1.75rem;
+            width: 320px;
+            min-width: 320px;
             white-space: normal;
             border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.02);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.02);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             flex-direction: column;
@@ -173,51 +173,52 @@
         .faq-item {
             background: white;
             border: 1px solid rgba(15, 23, 42, 0.02);
-            border-radius: 2rem;
-            margin-bottom: 1rem;
+            border-radius: 1.5rem;
+            margin-bottom: 0.75rem;
             transition: all 0.3s ease;
         }
         .faq-question {
             cursor: pointer;
-            padding: 1.5rem 2rem;
+            padding: 1.25rem 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-weight: 700;
             color: var(--midnight);
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
         @media (min-width: 1024px) {
             .faq-question { padding: 2rem; font-size: 1.15rem; }
+            .faq-item { border-radius: 2rem; margin-bottom: 1rem; }
         }
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s ease-in-out;
             color: #64748B;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
         }
         .faq-item.active .faq-answer {
             max-height: 500px;
-            padding-bottom: 2rem;
+            padding-bottom: 1.5rem;
         }
         .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--indigo-brand); }
 
         .verified-badge {
             background: #F1F5F9;
             color: #475569;
-            padding: 6px 14px;
+            padding: 5px 10px;
             border-radius: 99px;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 800;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.05em;
         }
 
-        .stars-gold { color: #F59E0B; font-size: 1.4rem; letter-spacing: 3px; }
+        .stars-gold { color: #F59E0B; font-size: 1.2rem; letter-spacing: 2px; }
     </style>
 </head>
 <body>
@@ -229,58 +230,60 @@
 
     <!-- Header Centralizado (Peso Normal) -->
     <header class="bg-[#0F172A] sticky top-0 z-50 border-b border-white/5 shadow-2xl">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-center items-center">
-            <span class="font-heading font-normal text-2xl lg:text-3xl text-white tracking-tighter uppercase">GLYCOPEZIL</span>
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-center items-center">
+            <span class="font-heading font-normal text-xl lg:text-3xl text-white tracking-tighter uppercase">GLYCOPEZIL</span>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="relative pt-12 lg:pt-28 pb-16">
+        <section class="relative pt-10 lg:pt-28 pb-12 lg:pb-16">
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 lg:gap-20 items-center">
                 
                 <!-- CONTENT AREA -->
                 <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <div class="inline-flex items-center gap-3 bg-white border border-indigo-100 px-5 py-2.5 rounded-full mb-8 shadow-sm">
+                    <div class="inline-flex items-center gap-2.5 bg-white border border-indigo-100 px-4 py-2 rounded-full mb-6 shadow-sm">
                         <span class="h-2 w-2 rounded-full bg-indigo-600 animate-pulse"></span>
-                        <span class="text-[11px] lg:text-[13px] font-extrabold text-indigo-900/60 uppercase tracking-widest">Bio-Cellular Wellness 2026</span>
+                        <span class="text-[10px] lg:text-[13px] font-extrabold text-indigo-900/60 uppercase tracking-widest">Bio-Cellular Wellness 2026</span>
                     </div>
 
-                    <h1 class="text-4xl lg:text-[92px] font-extrabold text-slate-900 leading-[1.1] lg:leading-[0.95] tracking-tighter mb-8">
+                    <!-- Optimized Headline: text-3xl mobile, 92px desktop -->
+                    <h1 class="text-3xl lg:text-[92px] font-extrabold text-slate-900 leading-tight lg:leading-[0.95] tracking-tighter mb-6 lg:mb-8">
                         Master Your <br/> 
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-purple-600">Metabolic</span> <span class="text-indigo-600">Flow.</span>
                     </h1>
 
-                    <!-- Product Photo (Blended) -->
-                    <div class="w-full flex justify-center lg:hidden mb-12 relative">
-                        <img src="images/glycop.png" alt="GlycoPezil Formula" class="blend-img w-full max-w-[340px] sm:max-w-[380px] px-2 relative z-10">
+                    <!-- Product Photo (Aumentada Mobile e Sincronizada com o Fundo) -->
+                    <div class="w-full flex justify-center lg:hidden mb-10 relative">
+                        <img src="images/glycop.png" alt="GlycoPezil Formula" class="blend-img w-full max-w-[320px] sm:max-w-[360px] px-2 relative z-10">
                     </div>
 
-                    <p class="text-lg lg:text-3xl text-slate-600 mb-10 lg:mb-14 leading-relaxed max-w-xl font-medium tracking-tight px-2 lg:px-0">
+                    <!-- Optimized Paragraph: text-base mobile, text-3xl desktop -->
+                    <p class="text-base lg:text-3xl text-slate-600 mb-8 lg:mb-14 leading-relaxed max-w-xl font-medium tracking-tight px-1 lg:px-0">
                         GlycoPezil™ offers a refined, natural approach to supporting your body's daily balance. Crafted for those who demand excellence in wellness.
                     </p>
 
-                    <!-- CTAs -->
+                    <!-- CTAs - Optimized for Mobile -->
                     <div class="flex flex-col sm:flex-row gap-5 w-full lg:w-auto">
-                        <a href="https://mwebora.com/12000/1227/7/?" class="cta-btn-main text-white px-10 py-6 lg:px-12 lg:py-7 rounded-[2.5rem] font-extrabold text-center flex flex-col items-center justify-center group w-full lg:w-auto">
-                            <span class="flex items-center gap-2 text-xl lg:text-2xl">Order Now & Save <i data-feather="shopping-bag" class="w-6 h-6"></i></span>
-                            <span class="text-[10px] opacity-70 font-bold uppercase tracking-widest mt-1">Official Secure Checkout</span>
+                        <a href="https://mwebora.com/12000/1227/7/?" class="cta-btn-main text-white px-8 py-5 lg:px-12 lg:py-7 rounded-2xl lg:rounded-[2.5rem] font-extrabold text-center flex flex-col items-center justify-center group w-full lg:w-auto">
+                            <span class="flex items-center gap-2 text-lg lg:text-2xl">Order Now & Save <i data-feather="shopping-bag" class="w-5 h-5"></i></span>
+                            <span class="text-[9px] lg:text-[10px] opacity-70 font-bold uppercase tracking-widest mt-1">Official Secure Checkout</span>
                         </a>
                     </div>
 
                     <!-- Trust Bar -->
-                    <div class="mt-16 lg:mt-20 flex flex-wrap items-center gap-x-8 lg:gap-x-12 gap-y-6 opacity-40 justify-center lg:justify-start w-full">
+                    <div class="mt-12 lg:mt-20 flex flex-wrap items-center gap-x-6 lg:gap-x-12 gap-y-4 lg:gap-y-6 opacity-40 justify-center lg:justify-start w-full">
                         <div class="flex items-center gap-2">
                             <i data-feather="shield" class="w-4 h-4 lg:w-5 lg:h-5"></i>
-                            <span class="text-[10px] lg:text-[12px] font-black uppercase tracking-widest">GMP Quality</span>
+                            <span class="text-[9px] lg:text-[12px] font-black uppercase tracking-widest">GMP Quality</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <i data-feather="map-pin" class="w-4 h-4 lg:w-5 lg:h-5"></i>
-                            <span class="text-[10px] lg:text-[12px] font-black uppercase tracking-widest">USA Sourced</span>
+                            <span class="text-[9px] lg:text-[12px] font-black uppercase tracking-widest">USA Sourced</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <i data-feather="refresh-cw" class="w-4 h-4 lg:w-5 lg:h-5"></i>
-                            <span class="text-[10px] lg:text-[12px] font-black uppercase tracking-widest">60-Day Guarantee</span>
+                            <span class="text-[9px] lg:text-[12px] font-black uppercase tracking-widest">60-Day Guarantee</span>
                         </div>
                     </div>
                 </div>
@@ -293,81 +296,82 @@
             </div>
         </section>
 
-        <!-- Marquee de Reviews (Unificado) -->
-        <section class="pb-24">
-            <div class="max-w-7xl mx-auto px-6 text-center mb-8">
+        <!-- Marquee de Reviews -->
+        <section class="pb-16 lg:pb-24">
+            <div class="max-w-7xl mx-auto px-6 text-center mb-6 lg:mb-8">
                 <div class="flex justify-center gap-1 stars-gold">
-                    <i data-feather="star" class="w-6 h-6 fill-current"></i>
-                    <i data-feather="star" class="w-6 h-6 fill-current"></i>
-                    <i data-feather="star" class="w-6 h-6 fill-current"></i>
-                    <i data-feather="star" class="w-6 h-6 fill-current"></i>
-                    <i data-feather="star" class="w-6 h-6 fill-current"></i>
+                    <i data-feather="star" class="w-5 h-5 lg:w-6 lg:h-6 fill-current"></i>
+                    <i data-feather="star" class="w-5 h-5 lg:w-6 lg:h-6 fill-current"></i>
+                    <i data-feather="star" class="w-5 h-5 lg:w-6 lg:h-6 fill-current"></i>
+                    <i data-feather="star" class="w-5 h-5 lg:w-6 lg:h-6 fill-current"></i>
+                    <i data-feather="star" class="w-5 h-5 lg:w-6 lg:h-6 fill-current"></i>
                 </div>
             </div>
             
             <div class="marquee-container">
                 <div class="marquee-content">
+                    <!-- Original Blocks -->
                     <div class="review-card">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="stars-gold font-bold">★★★★★</div>
-                            <div class="verified-badge"><i data-feather="tag" class="w-3.5 h-3.5"></i> Verified Purchase</div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="stars-gold font-bold text-base lg:text-xl">★★★★★</div>
+                            <div class="verified-badge"><i data-feather="tag" class="w-3 h-3"></i> Verified Purchase</div>
                         </div>
-                        <p class="text-base lg:text-[18px] font-medium text-slate-700 leading-relaxed mb-10 italic">"The best support formula I've ever used. Energy is stable and shipping was incredibly fast. Highly recommended!"</p>
-                        <div class="text-[14px] lg:text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— Robert L., Florida</div>
+                        <p class="text-sm lg:text-lg font-medium text-slate-700 leading-relaxed mb-8 italic">"The best support formula I've ever used. Energy is stable and shipping was incredibly fast. Highly recommended!"</p>
+                        <div class="text-[13px] lg:text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— Robert L., Florida</div>
                     </div>
                     <div class="review-card">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="stars-gold font-bold">★★★★★</div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="stars-gold font-bold text-base lg:text-xl">★★★★★</div>
                             <div class="verified-badge"><i data-feather="tag" class="w-3.5 h-3.5"></i> Verified Purchase</div>
                         </div>
-                        <p class="text-base lg:text-[18px] font-medium text-slate-700 leading-relaxed mb-10 italic">"Exactly what I was looking for to support my daily wellness naturally. Premium quality indeed and results are showing."</p>
-                        <div class="text-[14px] lg:text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— Sarah P., California</div>
+                        <p class="text-sm lg:text-lg font-medium text-slate-700 leading-relaxed mb-8 italic">"Exactly what I was looking for to support my daily wellness naturally. Premium quality indeed and results are showing."</p>
+                        <div class="text-[13px] lg:text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— Sarah P., California</div>
                     </div>
                     <div class="review-card">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="stars-gold font-bold">★★★★★</div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="stars-gold font-bold text-base lg:text-xl">★★★★★</div>
                             <div class="verified-badge"><i data-feather="tag" class="w-3.5 h-3.5"></i> Verified Purchase</div>
                         </div>
-                        <p class="text-base lg:text-[18px] font-medium text-slate-700 leading-relaxed mb-10 italic">"I'm on my 3rd bottle and the results are consistent. Great customer support too. Total transparency."</p>
-                        <div class="text-[14px] lg:text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— James H., Texas</div>
+                        <p class="text-sm lg:text-lg font-medium text-slate-700 leading-relaxed mb-8 italic">"I'm on my 3rd bottle and the results are consistent. Great customer support too. Total transparency."</p>
+                        <div class="text-[13px] lg:text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— James H., Texas</div>
                     </div>
                     <!-- Duplicate for infinite loop -->
                     <div class="review-card">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="stars-gold font-bold">★★★★★</div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="stars-gold font-bold text-base lg:text-xl">★★★★★</div>
                             <div class="verified-badge"><i data-feather="tag" class="w-3.5 h-3.5"></i> Verified Purchase</div>
                         </div>
-                        <p class="text-base lg:text-[18px] font-medium text-slate-700 leading-relaxed mb-10 italic">"The best support formula I've ever used. Energy is stable and shipping was incredibly fast."</p>
-                        <div class="text-[14px] lg:text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— Robert L., Florida</div>
+                        <p class="text-sm lg:text-lg font-medium text-slate-700 leading-relaxed mb-8 italic">"The best support formula I've ever used. Energy is stable and shipping was incredibly fast."</p>
+                        <div class="text-[13px] lg:text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— Robert L., Florida</div>
                     </div>
                     <div class="review-card">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="stars-gold font-bold">★★★★★</div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="stars-gold font-bold text-base lg:text-xl">★★★★★</div>
                             <div class="verified-badge"><i data-feather="tag" class="w-3.5 h-3.5"></i> Verified Purchase</div>
                         </div>
-                        <p class="text-base lg:text-[18px] font-medium text-slate-700 leading-relaxed mb-10 italic">"Premium quality indeed and results are showing. I've already shared it with my friends!"</p>
-                        <div class="text-[14px] lg:text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— Sarah P., California</div>
+                        <p class="text-sm lg:text-lg font-medium text-slate-700 leading-relaxed mb-8 italic">"Premium quality indeed and results are showing. I've already shared it with my friends!"</p>
+                        <div class="text-[13px] lg:text-[15px] font-extrabold text-slate-900 tracking-tight uppercase">— Sarah P., California</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ SECTION -->
-        <section class="py-24 lg:py-32 relative">
+        <section class="py-16 lg:py-32 relative">
             <div class="max-w-4xl mx-auto px-6">
-                <div class="text-center mb-16 lg:mb-20">
-                    <h2 class="text-4xl lg:text-6xl font-extrabold text-slate-900 mb-6 tracking-tighter">FAQ</h2>
-                    <p class="text-lg lg:text-xl text-slate-500 font-medium px-4">Your most common questions answered.</p>
+                <div class="text-center mb-12 lg:mb-20">
+                    <h2 class="text-3xl lg:text-6xl font-extrabold text-slate-900 mb-4 lg:mb-6 tracking-tighter">FAQ</h2>
+                    <p class="text-base lg:text-xl text-slate-500 font-medium px-4">Your most common questions answered.</p>
                 </div>
 
-                <div class="space-y-4 px-2 lg:px-0">
+                <div class="space-y-3 lg:space-y-4 px-1 lg:px-0">
                     <div class="faq-item" onclick="toggleFaq(this)">
                         <div class="faq-question">
                             <span>How should I take GlycoPezil™?</span>
                             <i data-feather="plus" class="faq-icon w-5 h-5 lg:w-6 lg:h-6 text-slate-400"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>For best results, take one serving daily with a full glass of water, ideally 20-30 minutes before your first meal of the day to ensure optimal absorption.</p>
+                            <p class="text-sm lg:text-base">For best results, take one serving daily with a full glass of water, ideally 20-30 minutes before your first meal of the day to ensure optimal absorption.</p>
                         </div>
                     </div>
 
@@ -377,7 +381,7 @@
                             <i data-feather="plus" class="faq-icon w-5 h-5 lg:w-6 lg:h-6 text-slate-400"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Yes. We stand behind our product with a 60-Day, 100% Money-Back Guarantee. If you're not thrilled with your results, we'll refund your purchase—no questions asked.</p>
+                            <p class="text-sm lg:text-base">Yes. We stand behind our product with a 60-Day, 100% Money-Back Guarantee. If you're not thrilled with your results, we'll refund your purchase—no questions asked.</p>
                         </div>
                     </div>
 
@@ -387,7 +391,7 @@
                             <i data-feather="plus" class="faq-icon w-5 h-5 lg:w-6 lg:h-6 text-slate-400"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>US orders are processed within 24 hours. Delivery usually takes 3-5 business days via USPS or UPS depending on your specific location within the country.</p>
+                            <p class="text-sm lg:text-base">US orders are processed within 24 hours. Delivery usually takes 3-5 business days via USPS or UPS depending on your specific location within the country.</p>
                         </div>
                     </div>
 
@@ -397,7 +401,7 @@
                             <i data-feather="plus" class="faq-icon w-5 h-5 lg:w-6 lg:h-6 text-slate-400"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Absolutely. We use industry-standard 256-bit SSL encryption to ensure your data is always protected and your transaction is 100% secure.</p>
+                            <p class="text-sm lg:text-base">Absolutely. We use industry-standard 256-bit SSL encryption to ensure your data is always protected and your transaction is 100% secure.</p>
                         </div>
                     </div>
 
@@ -407,7 +411,7 @@
                             <i data-feather="plus" class="faq-icon w-5 h-5 lg:w-6 lg:h-6 text-slate-400"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Yes, your purchase today is a one-time payment with no hidden charges or recurring subscriptions. You only pay for what you order today.</p>
+                            <p class="text-sm lg:text-base">Yes, your purchase today is a one-time payment with no hidden charges or recurring subscriptions. You only pay for what you order today.</p>
                         </div>
                     </div>
                 </div>
@@ -416,33 +420,33 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 pt-24 lg:pt-32 pb-16 text-slate-600">
+    <footer class="bg-slate-950 pt-20 lg:pt-32 pb-12 lg:pb-16 text-slate-600">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-16 mb-24">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 mb-16 lg:mb-24">
                 <div class="lg:col-span-5 text-center lg:text-left">
-                    <div class="flex items-center justify-center lg:justify-start mb-10">
-                        <span class="font-heading font-normal text-3xl text-white tracking-tighter uppercase">GLYCOPEZIL</span>
+                    <div class="flex items-center justify-center lg:justify-start mb-8 lg:mb-10">
+                        <span class="font-heading font-normal text-2xl lg:text-3xl text-white tracking-tighter uppercase">GLYCOPEZIL</span>
                     </div>
-                    <p class="text-base lg:text-[18px] leading-relaxed mb-12 max-w-sm mx-auto lg:mx-0 text-slate-400">
+                    <p class="text-sm lg:text-[18px] leading-relaxed mb-10 lg:mb-12 max-w-sm mx-auto lg:mx-0 text-slate-400">
                         Pioneering metabolic wellness through clinical-grade natural compounds. Dedicated to your long-term vitality.
                     </p>
                     <div class="space-y-2">
-                        <div class="text-[12px] font-black uppercase tracking-[0.4em] text-slate-800">Assistance Center</div>
-                        <p class="text-white font-bold text-xl lg:text-2xl">support@customercs.com</p>
+                        <div class="text-[10px] lg:text-[12px] font-black uppercase tracking-[0.4em] text-slate-800">Assistance Center</div>
+                        <p class="text-white font-bold text-lg lg:text-2xl">support@customercs.com</p>
                     </div>
                 </div>
 
                 <div class="lg:col-span-7">
-                    <div class="bg-white/5 rounded-[3.5rem] p-10 lg:p-12 border border-white/10">
-                        <p class="text-[11px] lg:text-[13px] leading-relaxed italic text-justify text-slate-500">
+                    <div class="bg-white/5 rounded-3xl p-8 lg:p-12 border border-white/10">
+                        <p class="text-[10px] lg:text-[13px] leading-relaxed italic text-justify text-slate-500">
                             <strong>FDA Disclaimer:</strong> These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary by individual. © 2026 Authorized Distributor.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="border-t border-white/5 pt-16 flex flex-col md:flex-row justify-between items-center gap-14 text-[10px] lg:text-[12px] font-black uppercase tracking-[0.25em]">
-                <nav class="flex flex-wrap justify-center gap-x-8 lg:gap-x-16 gap-y-6">
+            <div class="border-t border-white/5 pt-12 lg:pt-16 flex flex-col md:flex-row justify-between items-center gap-10 lg:gap-14 text-[9px] lg:text-[12px] font-black uppercase tracking-[0.25em]">
+                <nav class="flex flex-wrap justify-center gap-x-8 lg:gap-x-16 gap-y-4 lg:gap-y-6">
                     <button onclick="openModal('privacy')" class="hover:text-indigo-400 transition-colors">Privacy Policy</button>
                     <button onclick="openModal('terms')" class="hover:text-indigo-400 transition-colors">Terms of Service</button>
                     <button onclick="openModal('returns')" class="hover:text-indigo-400 transition-colors">Refund Policy</button>
@@ -452,7 +456,7 @@
                 
                 <div class="flex flex-col items-center md:items-end gap-3">
                     <span class="text-slate-800">Authorized Distributor</span>
-                    <p class="text-slate-700 text-[10px] lg:text-[11px] tracking-widest text-center">© 2026 GlycoPezil Health Labs. All Rights Reserved.</p>
+                    <p class="text-slate-700 text-[9px] lg:text-[11px] tracking-widest text-center">© 2026 GlycoPezil Health Labs. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
@@ -462,14 +466,14 @@
     <div id="policy-modal" class="fixed inset-0 z-[100] hidden" aria-modal="true">
         <div class="fixed inset-0 bg-slate-950/98 backdrop-blur-3xl" onclick="closeModal()"></div>
         <div class="fixed inset-0 flex items-center justify-center p-4">
-            <div class="bg-white w-full max-w-3xl rounded-[3rem] lg:rounded-[4rem] overflow-hidden shadow-2xl relative">
-                <div class="px-10 lg:px-14 py-8 lg:py-12 border-b border-slate-100 flex justify-between items-center bg-slate-50">
-                    <h3 class="font-bold text-slate-900 text-2xl lg:text-3xl tracking-tighter" id="modal-title">Policy</h3>
-                    <button onclick="closeModal()" class="p-4 hover:bg-white rounded-full transition-all">
-                        <i data-feather="x" class="w-8 h-8 text-slate-400"></i>
+            <div class="bg-white w-full max-w-3xl rounded-[2rem] lg:rounded-[4rem] overflow-hidden shadow-2xl relative">
+                <div class="px-8 lg:px-14 py-6 lg:py-12 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                    <h3 class="font-bold text-slate-900 text-xl lg:text-3xl tracking-tighter" id="modal-title">Policy</h3>
+                    <button onclick="closeModal()" class="p-3 hover:bg-white rounded-full transition-all">
+                        <i data-feather="x" class="w-6 h-6 lg:w-8 lg:h-8 text-slate-400"></i>
                     </button>
                 </div>
-                <div class="p-10 lg:p-16 max-h-[60vh] overflow-y-auto text-base lg:text-[18px] text-slate-600 leading-relaxed" id="modal-content"></div>
+                <div class="p-8 lg:p-16 max-h-[60vh] overflow-y-auto text-sm lg:text-[18px] text-slate-600 leading-relaxed" id="modal-content"></div>
             </div>
         </div>
     </div>
